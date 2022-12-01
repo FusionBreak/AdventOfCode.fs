@@ -2,18 +2,19 @@
 
 open Xunit
 open AdventOfCode.fs.Year2022
+open System.IO
 
 module Day1Tests =
+
 
     [<Fact>]
     let ``Part 1`` () =
 
-        let report =  [ "1000"; "2000"; "3000"; ""; "4000"; ""; "5000"; "6000"; ""; "7000"; "8000"; "9000"; ""; "10000"; ]
-        Assert.Equal(24000, Day1.SolvePart1 report)
+        let report = File.ReadLines("Input/2022/Day1.txt") |> Seq.toList
+        Assert.Equal(70369, Day1.SolvePart1 report)
 
     [<Fact>]
     let ``Part 2`` () =
 
-        let report =  [ "1000"; "2000"; "3000"; ""; "4000"; ""; "5000"; "6000"; ""; "7000"; "8000"; "9000"; ""; "10000"; ]
-        Assert.Equal(45000, Day1.SolvePart2 report)
-
+        let report = File.ReadLines("Input/2022/Day1.txt") |> Seq.toList
+        Assert.Equal(203002, Day1.SolvePart2 report)

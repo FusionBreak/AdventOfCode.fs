@@ -5,7 +5,7 @@ open AdventOfCode.fs.Util
 module Day1 =
 
     let SolvePart1 input =
-        input 
+        input
         |> splitByChar ""
         |> Seq.map (fun strings -> strings |> toNumbers |> Seq.sum)
         |> Seq.toList
@@ -13,7 +13,7 @@ module Day1 =
         |> List.head
 
     let SolvePart2 input =
-        input 
+        input
         |> splitByChar ""
         |> Seq.map (fun strings -> strings |> toNumbers |> Seq.sum)
         |> Seq.toList
