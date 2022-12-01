@@ -13,7 +13,6 @@ module Day1 =
         |> List.head
 
     let SolvePart2 input =
-        
         input 
         |> splitByChar ""
         |> Seq.map (fun strings -> strings |> toNumbers |> Seq.sum)
