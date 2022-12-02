@@ -8,7 +8,11 @@
     <Content Include="Input\2022\Day1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Input\2022\Day2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="2022\Day1Tests.fs" />
+	<Compile Include="2022\Day2Tests.fs" />
     <Compile Include="2021\Day1Tests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
@@ -26,5 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.fs\AdventOfCode.fs.fsproj" />
+    <Compile Include="2022\Day2Tests.fs" />
   </ItemGroup>
 </Project>
