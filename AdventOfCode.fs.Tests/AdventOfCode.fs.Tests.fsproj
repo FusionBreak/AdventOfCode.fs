@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <IsPackable>false</IsPackable>
@@ -11,6 +11,10 @@
     <Content Include="Input\2022\Day2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+	<Content Include="Input\2022\Day3.txt">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
+    <Compile Include="2022\Day3Tests.fs" />
     <Compile Include="2022\Day1Tests.fs" />
 	<Compile Include="2022\Day2Tests.fs" />
     <Compile Include="2021\Day1Tests.fs" />
