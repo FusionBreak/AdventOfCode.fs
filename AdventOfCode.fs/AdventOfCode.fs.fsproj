@@ -4,7 +4,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Util.fs" />
     <Compile Include="2022\Day3.fs" />
     <Compile Include="2022\Day1.fs" />
     <Compile Include="2021\Day1.fs" />

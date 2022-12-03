@@ -1,7 +1,5 @@
 namespace AdventOfCode.fs.Year2022
 
-open AdventOfCode.fs.Util
-
 module Day2 =
 
     type Shape =

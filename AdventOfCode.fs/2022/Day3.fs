@@ -28,15 +28,6 @@ module Day3 =
 
 
     let SolvePart2 input =
-        let chunkRows (rows:list<string>) =
-            seq {
-                let mutable index = 0
-
-                while index < rows.Length do
-                    yield rows |> Seq.skip index |> Seq.take 3
-                    index <- index + 3
-            }
-
         let findDuplicate (rows:seq<string>) =
             let first = rows |> Seq.head
             let second = rows |> Seq.skip 1 |> Seq.head
@@ -47,7 +38,7 @@ module Day3 =
             |> Seq.head
 
         input
-        |> chunkRows
+        |> Seq.chunkBySize 3
         |> Seq.map (fun chunk -> findDuplicate chunk)
         |> Seq.map (fun duplicate -> toPoints duplicate)
         |> Seq.sum
