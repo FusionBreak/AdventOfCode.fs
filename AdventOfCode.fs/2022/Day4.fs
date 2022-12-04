@@ -11,8 +11,8 @@ module Day4 =
                         (int numbers[0], int numbers[1])
                     )
     
-    let isInRange slice number =
-            slice |> Seq.contains number
+    let isInRange slice (first, last) =
+            slice |> Seq.contains first || slice |> Seq.contains last
 
     let containsCompletely a b =
         let (aFirst, aLast) = a
@@ -22,9 +22,7 @@ module Day4 =
     let overlaps a b =
         let (aFirst, aLast) = a
         let (bFirst, bLast) = b
-        aFirst |> isInRange [bFirst..bLast] || aLast |> isInRange [bFirst..bLast] 
-        ||
-        bFirst |> isInRange [aFirst..aLast] || bLast |> isInRange [aFirst..aLast]
+        a |> isInRange [bFirst..bLast] || b |> isInRange [aFirst..aLast]
         
     let SolvePart1 input =
         input
