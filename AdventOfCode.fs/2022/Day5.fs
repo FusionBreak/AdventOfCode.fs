@@ -65,7 +65,7 @@ module Day5 =
         crateStacks[toIndex] <- crateStacks[toIndex] |> add taken 
         crateStacks
 
-    let SolvePart1 input =        
+    let solve input rev =
         let procedures = input 
                         |> Seq.skip 10
                         |> Seq.map (fun line -> line |> parseProcedures)
@@ -77,28 +77,13 @@ module Day5 =
                                     |> Seq.toArray
         
         for procedure in procedures do
-            crateStacks <- procedure |> move crateStacks true
+            crateStacks <- procedure |> move crateStacks rev
         
         crateStacks
         |> Seq.map (fun stack -> stack |> Seq.head)
         |> Seq.toArray
         |> System.String
+    
+    let SolvePart1 input = solve input true
 
-    let SolvePart2 input =      
-        let procedures = input 
-                        |> Seq.skip 10
-                        |> Seq.map (fun line -> line |> parseProcedures)
-
-        let mutable crateStacks = input 
-                                    |> Seq.take 8
-                                    |> Seq.map (fun line -> line |> parseCrates)
-                                    |> stackCrates
-                                    |> Seq.toArray
-
-        for procedure in procedures do
-            crateStacks <- procedure |> move crateStacks false
-
-        crateStacks
-        |> Seq.map (fun stack -> stack |> Seq.head)
-        |> Seq.toArray
-        |> System.String
+    let SolvePart2 input = solve input false
