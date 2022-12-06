@@ -17,6 +17,10 @@
 	<Content Include="Input\2022\Day4.txt">
 		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Content>
+	<Content Include="Input\2022\Day5.txt">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
+	<Compile Include="2022\Day5Tests.fs" />
 	<Compile Include="2022\Day4Tests.fs" />
     <Compile Include="2022\Day3Tests.fs" />
     <Compile Include="2022\Day1Tests.fs" />
