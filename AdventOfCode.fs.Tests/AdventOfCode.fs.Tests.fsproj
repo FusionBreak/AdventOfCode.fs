@@ -5,6 +5,9 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="input\2023\Day1.txt">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
     <Content Include="Input\2022\Day1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -20,6 +23,7 @@
 	<Content Include="Input\2022\Day5.txt">
 		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Content>
+	<Compile Include="2023\Day1Tests.fs" />
 	<Compile Include="2022\Day5Tests.fs" />
 	<Compile Include="2022\Day4Tests.fs" />
     <Compile Include="2022\Day3Tests.fs" />
@@ -43,5 +47,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.fs\AdventOfCode.fs.fsproj" />
     <Compile Include="2022\Day2Tests.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Input\2023\" />
   </ItemGroup>
 </Project>
